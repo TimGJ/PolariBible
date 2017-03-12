@@ -1,0 +1,13 @@
+<!-- $Id $-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta name="GENERATOR" content="Sr. Calculatrixy" />
+<meta name="description" content="The King James Bible as translated in to Polari by the Manchester (UK) House of the Sisters of Perpetual Indulgence" />
+<meta name="keywords" content="bible, polari, nuns, Sisters of Perpetual Indulgence, rum, sodomy, lash, gay, lobster" />
+<meta name="created" content="20080802" /
+<title>BLANK</title>
+<link rel="stylesheet" type="text/css" media="screen" href="fatbastard.css" />
+</head>
+<body>

@@ -1,0 +1,9 @@
+*~
+__pycache__
+*.pkl
+*.ppk
+*.htm
+*.html
+*.text
+*.epub
+*.pdf

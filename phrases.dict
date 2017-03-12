@@ -1,0 +1,77 @@
+# Dictionary for use with the Polari Bible Ver. 3
+# Automatically re-generated on Wed Nov  2 15:40:40 GMT 2005 by TGJ
+#
+# $Id: phrases.dict,v 1.2 2014/03/13 22:12:54 tim Exp $
+#
+# $Log: phrases.dict,v $
+# Revision 1.2  2014/03/13 22:12:54  tim
+# Doing a pre-emptive check-in prior to finally doing some work on
+# the Polari Bible.
+#
+# Revision 1.1.1.1  2013/06/20 15:38:07  tim
+# The umpteenth (probably fifth) version of the Polari Bible source
+# code. Takes the raw text of the King James Bible (kjv.rawtxt) and
+# processes it in to Polari doing substitutions based on the various
+# .dict files.
+#
+# This version extracts the individual books which is stores as 
+# intermediate pickle files. (This is understandable as if the Bible
+# is to be placed on-line then folks will only want to retrieve it
+# a book at a time.) These pickle files are then converted to .rhtml
+# files which are then subsequently converted to HTML.
+#
+# I *think* the way forward is to have two separate components: the
+# first reads the raw text of the Bible, splits it in to books, 
+# chapters and verses and then translates it. 
+#
+# This data structure can then either be pickled or passed to whatever
+# output formatting engine (PDF, HTML, e-reader...) is desired.
+#
+#
+Get thee behind me, Satan:Get her
+Hebrew women:Kosher palones
+Holy Ghost:Fantabulosa Fairy
+I AM THAT I AM:I AM WHAT I AM I don't need praise, I don't want pity
+I know thy works:I've got your number, ducky
+an abomination:a dowriest cod
+and it came to pass:any road up
+broke down:ferricadoozad
+depart from me:sling yer hook
+dwelling place:lattie
+do not:nix
+far from:nishter ajax
+go about:troll about
+go away:troll away
+go forth:troll forth
+go in peace:sling yer hook
+go not:troll not
+go not away:troll nishta away
+go out:troll out
+thou shalt not:nishta
+in truth:no flies
+inner chamber:back slum
+is angry:has his wild up
+lead on:troll on
+left hand:dry martini
+making mention of:dishing the dirt on
+milk and honey:gin and tonic
+no more:nishta
+old age:badgeness
+old man:badge cove
+old men:badge coves
+pass away:troll away
+pass by:troll by
+pass over:troll over
+passed by:trolled by
+privy member:bagadga
+return to:troll back to
+returned to:trolled back to
+right hand:sweet martini
+strong man:manly alice
+strong men:manly alices
+under my roof:up my lattie
+upper room:dark room
+with child:up the duff
+ye shall not:nanti
+young man:bean cove
+young men:bean coves
