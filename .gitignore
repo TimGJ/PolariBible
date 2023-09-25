@@ -7,3 +7,6 @@ __pycache__
 *.text
 *.epub
 *.pdf
+.idea/
+*.xml
+*.iml
