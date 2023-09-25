@@ -1,20 +1,5 @@
-# Dictionary for use with the Polari Bible Ver. 3
-# Automatically re-generated on Wed Nov  2 15:40:40 GMT 2005 by TGJ
-#
-# $Id: phrases.dict,v 1.2 2014/03/13 22:12:54 tim Exp $
-#
-# $Log: phrases.dict,v $
-# Revision 1.2  2014/03/13 22:12:54  tim
-# Doing a pre-emptive check-in prior to finally doing some work on
-# the Polari Bible.
-#
-# Revision 1.1.1.1  2013/06/20 15:38:07  tim
-# The umpteenth (probably fifth) version of the Polari Bible source
-# code. Takes the raw text of the King James Bible (kjv.rawtxt) and
-# processes it in to Polari doing substitutions based on the various
-# .dict files.
-#
-# This version extracts the individual books which is stores as 
+# Dictionary for use with the Polari Bible Ver. 7
+# This version extracts the individual books which is stores as
 # intermediate pickle files. (This is understandable as if the Bible
 # is to be placed on-line then folks will only want to retrieve it
 # a book at a time.) These pickle files are then converted to .rhtml

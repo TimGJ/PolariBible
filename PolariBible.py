@@ -1,6 +1,5 @@
-""" General definitions for the Polari Bible
- including the classes used throughout. Copyright (c)
- 2004-2015 Tim Greening-Jackson """
+""" General definitions for the Polari Bible including the classes used throughout.
+Copyright (c)  2004-2015 Tim Greening-Jackson """
 
 import re
 import itertools
@@ -15,8 +14,7 @@ class Verse:
         return '[{n}] {v}\n'.format(n=self.index, v=self.text)
         
 class Chapter:
-    """ Class which holds a chapter of the Bible - i.e.
-     mostly consists of verses """
+    """ Class which holds a chapter of the Bible - i.e. mostly consists of verses """
     def __init__(self, index):
         self.index    = index
         self.verses   = []

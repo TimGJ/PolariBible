@@ -4,26 +4,14 @@ nicely typset text.
 
 Part of Polari Bible 7th edition software Copyright (c) 
 2004 - 2014 Tim Greening-Jackson
-$Id: PickleToLaTeX.py,v 1.3 2014/06/12 19:00:56 tim Exp $
 """
-from __future__ import print_function
 
-# $Header: /cvsroot/Bible/PickleToLaTeX.py,v 1.3 2014/06/12 19:00:56 tim Exp $
-#
-# $Log: PickleToLaTeX.py,v $
-# Revision 1.3  2014/06/12 19:00:56  tim
-# Upgraded to Python 3. Fixed minor incompatibilities with Python 3.
-#
-# Revision 1.2  2014/06/12 17:08:13  tim
-# General pre-release tidying prior to freeze
-#
-
-Id = "$Id: PickleToLaTeX.py,v 1.3 2014/06/12 19:00:56 tim Exp $"
+Id = ""
 
 import pickle
 import re
 import sys
-import PolariBibleGlobals
+import PolariBible
 
 LaTeXHeader = r"""
 \documentclass[a4paper,10pt]{book}
@@ -103,7 +91,9 @@ def ProcessBook(book):
         for c in book.chapters:
             print("\\subsection{{{} {}}}".format(chaptitle, c.index), file=o)
             for v in c.verses:
-                v.text = pre.sub("\\emph {\g<1>}", v.text)
+                if "<polari>" in v.text:
+                    v.text = pre.sub("[emph] {\g<1>}", v.text)
+                    v.text = v.text.replace("[emph]", "\\emph")
                 print("\\emph{{{}}} {}\\\\".format(v.index, v.text), file=o)
         print("\\end{multicols}", file=o)
 

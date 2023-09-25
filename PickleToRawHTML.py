@@ -6,7 +6,7 @@ Part of Polari Bible 5th edition software Copyright (c)
 import pickle
 import re
 import sys
-import PolariBibleGlobals
+import PolariBible
 
 def WriteHTMLHeader(o, n):
     """

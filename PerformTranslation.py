@@ -2,30 +2,9 @@
  part of the 2012 version of the Polari Bible
  (C) 2004-2012 Tim Greening-Jackson """
 
-# $Header: /cvsroot/Bible/PerformTranslation.py,v 1.5 2014/06/12 19:00:55 tim Exp $
-#
-# $Log: PerformTranslation.py,v $
-# Revision 1.5  2014/06/12 19:00:55  tim
-# Upgraded to Python 3. Fixed minor incompatibilities with Python 3.
-#
-# Revision 1.4  2014/06/12 18:02:24  tim
-# SplitRawTextIntoBooks is no longer required as that job is done
-# by PerformTranslation and so has been removed as part of the tidying
-# process.
-#
-# Minor cosmetic modifications to PerformTranslation.
-#
-# Revision 1.3  2014/06/12 16:36:39  tim
-# Routine checkin prior to pre-release build
-#
-# Revision 1.2  2014/03/13 22:12:54  tim
-# Doing a pre-emptive check-in prior to finally doing some work on
-# the Polari Bible.
-#
+Id = ""
 
-Id = "$Id: PerformTranslation.py,v 1.5 2014/06/12 19:00:55 tim Exp $"
-
-from PolariBibleGlobals import *
+from PolariBible import *
 import re
 import time
 import pickle
