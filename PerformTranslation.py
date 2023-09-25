@@ -4,7 +4,7 @@
 
 Id = ""
 
-from PolariBibleGlobals import *
+from PolariBible import *
 import re
 import time
 import pickle
