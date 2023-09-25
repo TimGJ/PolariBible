@@ -10,3 +10,4 @@ __pycache__
 .idea/
 *.xml
 *.iml
+md5sums
