@@ -91,7 +91,9 @@ def ProcessBook(book):
         for c in book.chapters:
             print("\\subsection{{{} {}}}".format(chaptitle, c.index), file=o)
             for v in c.verses:
-                v.text = pre.sub("\\emph {\g<1>}", v.text)
+                if "<polari>" in v.text:
+                    v.text = pre.sub("[emph] {\g<1>}", v.text)
+                    v.text = v.text.replace("[emph]", "\\emph")
                 print("\\emph{{{}}} {}\\\\".format(v.index, v.text), file=o)
         print("\\end{multicols}", file=o)
 
