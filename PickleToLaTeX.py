@@ -5,7 +5,6 @@ nicely typset text.
 Part of Polari Bible 7th edition software Copyright (c) 
 2004 - 2014 Tim Greening-Jackson
 """
-from __future__ import print_function
 
 Id = ""
 
