@@ -72,4 +72,4 @@ web: bible.pdf rawhtml
 
 .PHONY: clean
 clean:
-	rm -vrf *.log *.tmp *.tex *.png *.toc *.aux *.pyc *.ppk *.pkl *.html *.rhtml *.pdf $(WEBDIR) *~ 2> /dev/null
+	rm -vrf *.log *.tmp *.tex *.png *.toc *.aux *.pyc *.ppk *.pkl *.html *.rhtml *.pdf *.epub md5sums $(WEBDIR) *~ 2> /dev/null
