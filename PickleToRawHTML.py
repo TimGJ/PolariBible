@@ -48,9 +48,7 @@ def ProcessBook(book):
     with open(BookHTMLFileName(book), "w") as o:
         print("Writing {}".format(BookHTMLFileName(book)))
         WriteHTMLHeader(o, book.title)
-# Following line commented out as we are trying to
-# automate import in to WordPress...
-#        o.write("<h2>{}</h2>\n".format(book.title))
+        o.write("<h2>{}</h2>\n".format(book.title))
         chaptitle = "Psalm" if book.psalms else "Chapter"
         for c in book.chapters:
             o.write("<h3>{} {}</h3>\n<ol>\n".format(chaptitle, c.index))
@@ -58,6 +56,7 @@ def ProcessBook(book):
                 v.text = pre.sub("<em>\g<1></em>", v.text)
                 o.write("<li>{}\n".format(v.text))
             o.write("</ol>\n")
+        o.write(open("buildinfo.html", "r").read())
         WriteHTMLFooter(o)
 
 if __name__ == '__main__':
@@ -76,6 +75,7 @@ if __name__ == '__main__':
                             index.write("<h1>New Testament</h1>")
                         WriteHTMLIndexEntry(index, b)
                         ProcessBook(b)
+            index.write('<a href="buildinfo.html"><h3>Build Information</h3></a>\n')
             WriteHTMLFooter(index)
                     
             

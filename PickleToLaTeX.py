@@ -42,6 +42,7 @@ LaTeXHeader = r"""
 \begin{center}
 \makebox[\textwidth]{\includegraphics[width=\textwidth]{ATypicalFridayNightOnCanalStreet}}
 \end{center}
+\include{buildinfo}
 """
 
 def InsertIllustration(handle, name):
