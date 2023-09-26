@@ -44,17 +44,22 @@ bible.pkl : $(Dictionaries) PerformTranslation.py
 introduction.tex : introduction.txt CreateIntroductionTex.py
 	$(PYTHON) CreateIntroductionTex.py $(Dictionaries)
 
+buildinfo.tex buildinfo.html: GetBuildInfo.py
+	$(PYTHON) GetBuildInfo.py
+
+
 bible.epub : bible.tex
 
-rawhtml : bible.pkl
+rawhtml : bible.pkl buildinfo.html
 	$(PYTHON) PickleToRawHTML.py bible.pkl
 	cp introduction.txt introduction.html
 
-bible.pdf : bible.pkl dictionaries.pkl introduction.tex PickleToLaTeX.py $(IMAGES:=.png)
+bible.pdf : bible.pkl dictionaries.pkl introduction.tex buildinfo.tex buildinfo.html PickleToLaTeX.py $(IMAGES:=.png)
 	rm -vf *.{aux,toc,pdf,tex}
 	$(PYTHON) PickleToLaTeX.py bible.pkl
 	$(LATEX) bible.tex
 	$(LATEX) bible.tex
+	rm -v *.aux *.tex
 
 md5sums : bible.pdf bible.epub
 	$(MD5SUM) bible.pdf bible.epub > md5sums
@@ -62,13 +67,6 @@ md5sums : bible.pdf bible.epub
 web: bible.pdf rawhtml
 	mkdir -p $(WEBDIR)
 	cp -v bible.pdf *.html *.css $(WEBDIR)
-
-# The .SECONDARY directive stops the intermediate files being 
-# cleaned up post-build. Commented out for the time being
-# in an attempt to keep things clean.
-#
-# TGJ 12 June 2014
-#.SECONDARY: %.pkl %.rhtml
 
 .PHONY: clean
 clean:
