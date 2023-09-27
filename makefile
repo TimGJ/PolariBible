@@ -2,7 +2,6 @@ PYTHON  = /usr/bin/python3
 LATEX	= /usr/bin/xelatex
 CONVERT = /usr/bin/convert
 PANDOC  = /usr/bin/pandoc
-MD5SUM  = /usr/bin/md5sum
 WEBDIR  = bible
 
 # Didn't want to delete these definitions as they
@@ -30,7 +29,7 @@ IMAGES  = ATypicalFridayNightOnCanalStreet \
 
 Dictionaries := words.dict phrases.dict
 
-bible :	md5sums bible.epub bible.pdf
+bible :	rawhtml bible.pdf
 
 %.png : %.xcf
 	$(CONVERT) -flatten $< $@
@@ -61,12 +60,9 @@ bible.pdf : bible.pkl dictionaries.pkl introduction.tex buildinfo.tex buildinfo.
 	$(LATEX) bible.tex
 	rm -v *.aux *.tex
 
-md5sums : bible.pdf bible.epub
-	$(MD5SUM) bible.pdf bible.epub > md5sums
-
-web: bible.pdf rawhtml
+web: rawhtml
 	mkdir -p $(WEBDIR)
-	cp -v bible.pdf *.html *.css $(WEBDIR)
+	mv -v *.html $(WEBDIR)
 
 .PHONY: clean
 clean:
